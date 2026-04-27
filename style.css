@@ -8,7 +8,8 @@ body{
     font-style: normal;
 }
 
-
+/** Aca esta todo en orden el stile de la pagina
+de arriba hacia abajo**/
 header{
     display: flex;
     background-color: black;
@@ -52,8 +53,7 @@ nav a:hover{
     background-color: white;
     border: 1px solid #e0e0e0;
     border-radius: 15px;
-    padding: 70px;
-    
+    padding: 60px;
 }
 
 .aventura{
@@ -61,3 +61,49 @@ nav a:hover{
     border: 1px;
     border-radius: 15px;
 }
+
+#PasosV{
+    background-color: white;
+    border: 1px solid  #e0e0e0;
+    border-radius: 15px;
+    padding: 15px;
+    width: fit-content;
+}
+
+#PasosCont{
+    background-color: white;
+    border: 1px solid #e0e0e0; 
+    border-radius: 15px;
+    width: fit-content;
+    border-left: 3px rgb(7, 177, 7) solid;
+}
+
+#PasosCont ol{
+    padding: 20px 40px;
+
+}
+
+#PasosCont li{
+    font-size: 18px;
+}
+
+
+#FooterP1{
+    background-color: black;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.ListaFt{
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    margin: 0;
+    padding: 10px 0px;
+    justify-content: center;
+}
+
+.ListaFt li {
+    color: white;
+}
+
