@@ -54,6 +54,7 @@ nav a:hover{
     border: 1px solid #e0e0e0;
     border-radius: 15px;
     padding: 60px;
+
 }
 
 .aventura{
@@ -107,3 +108,21 @@ nav a:hover{
     color: white;
 }
 
+/** Pagina de viajes**/
+
+
+table {
+    table-layout: fixed;
+    width: 90%;
+    margin: 10px auto;
+    border-collapse: collapse;
+}
+
+
+#SecTablas{
+    background-color: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 15px;
+    width: fit-content;
+    margin-top: 50px;
+}
