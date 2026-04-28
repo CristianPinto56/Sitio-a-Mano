@@ -1,7 +1,14 @@
 body{
     margin: 0px;
-    background-image: url("images/imagenfondo.jpg");
-    background-size: 100%;
+    background-image: url("images/fondoporgeminis.png");
+    background-size: cover; 
+    /* Mantiene la imagen fija al hacer scroll */
+    background-attachment: fixed; 
+    /* Asegura que el fondo se centre */
+    background-position: center;
+    /* Asegura que el body ocupe al menos el alto de la pantalla */
+    min-height: 100vh;
+
     font-family: "Oswald", sans-serif;
     font-optical-sizing: auto;
     font-weight: 500;
@@ -12,7 +19,7 @@ body{
 de arriba hacia abajo**/
 header{
     display: flex;
-    background-color: black;
+    background-color:rgba(0, 0, 0, 0.7); /* El 0.8 le da opacidad, una transparencia, los primeros 3 numeros son el color, luego la opacidad*/
     justify-content: center;
     align-items: center;
     padding: 0;
@@ -39,21 +46,28 @@ nav ul{
 }
 
 nav a{
+    display: inline-block;
     color: white;
     text-decoration: none;
+    transition: 0.3s;
 }
 
 nav a:hover{
     color: rgb(7, 177, 7);
+    transform: scale(1.05);
 }
+
 
 
 #Sprin{
     margin-top: 50px;
-    background-color: white;
-    border: 1px solid #e0e0e0;
     border-radius: 15px;
     padding: 60px;
+    max-width: 950px; /* Evita que crezca infinito hacia los lados */
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.7); /* Sombra suave para dar profundidad */
+    border: none; 
 
 }
 
@@ -64,19 +78,25 @@ nav a:hover{
 }
 
 #PasosV{
-    background-color: white;
-    border: 1px solid  #e0e0e0;
+    margin-top: 80px;
+    border: none;
     border-radius: 15px;
     padding: 15px;
     width: fit-content;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.8);
+    margin-left: auto;
+    margin-right: auto; /* con ambas lineas del margin left y right hacemos que quede al medio de la pagina*/
 }
 
 #PasosCont{
-    background-color: white;
-    border: 1px solid #e0e0e0; 
+    margin-top: 50px;
+    border: none;
     border-radius: 15px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.8);
     width: fit-content;
     border-left: 3px rgb(7, 177, 7) solid;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #PasosCont ol{
@@ -88,11 +108,28 @@ nav a:hover{
     font-size: 18px;
 }
 
+#PasosCont a {
+    display: inline-block;
+    background-color: #07b107;
+    color: white;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 5px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+#PasosCont a:hover {
+    background-color: #058a05;
+    transform: scale(1.05); /* Se agranda un poquito al tocarlo */
+}
+
 
 #FooterP1{
-    background-color: black;
+    background-color:rgba(0, 0, 0, 0.8);
     justify-content: center;
-    margin-top: 50px;
+    margin-top: 80px;
 }
 
 .ListaFt{
@@ -108,7 +145,21 @@ nav a:hover{
     color: white;
 }
 
-/** Pagina de viajes**/
+.ListaFt a{
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+.ListaFt a:hover{
+    color: #058a05;
+    transform: scale(1.05);
+}
+
+
+
+
+/** PAGINA DE VIAJES**/
 
 
 table {
@@ -116,13 +167,53 @@ table {
     width: 90%;
     margin: 10px auto;
     border-collapse: collapse;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.7);
 }
 
+th {
+    background-color: #07b107; 
+    color: white;
+    padding: 12px;
+}
 
-#SecTablas{
-    background-color: white;
-    border: 1px solid #e0e0e0;
+td {
+    padding: 10px;
+    border-bottom: 1px solid #080808; /* Solo una línea abajo */
+    text-align: center;
+}
+
+tr:hover {
+    background-color: #a6dae7; 
+    transform: scale(1.02);
+    border: 1px;
     border-radius: 15px;
-    width: fit-content;
-    margin-top: 50px;
 }
+
+#PrinciViajes{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#TituloViajes{
+    border:none;
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    text-align: center; 
+    margin: 50px auto 20px auto;
+}
+
+#avion{
+    margin-top: 50px;
+    width: 900px;
+}
+
+
+#FooterViajes{
+    margin-top: 90px;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
